@@ -1,18 +1,35 @@
-
-  function GetInputValue() {
-    const button = document.querySelector('.counter-button');
+function GetInputValue(tabIndex) {
+    const button = document.querySelector(`.tabPanel:nth-child(${tabIndex + 1}) .counter-button`);
     return button.value;
-  }
+}
 
-  // Export counters to text file
-    // Export counters to text file
-    document.getElementById('exportButton').addEventListener('click', function() {
-        let textContent = `${button1.textContent}: ${count1}\n`;
-        textContent += `${button2.textContent}: ${count2}\n`;
-        textContent += `${button3.textContent}: ${count3}\n`;
-        textContent += `${button4.textContent}: ${count4}\n`;
-        textContent += `${GetInputValue()}: ${count5}\n`;
+let counters = [
+    { count1: 0, count2: 0, count3: 0, count4: 0, count5: 0},
+    { count6: 0, count7: 0, count8: 0, count9: 0, count10: 0, count11: 0, count12: 0 }
+];
 
-        var blob = new Blob([textContent], { type: "text/plain;charset=utf-8" });
-        saveAs(blob, "counters.txt");
-    });
+
+document.getElementById('exportButton').addEventListener('click', function() {
+    let textContent = '';
+
+    for (let i = 0; i < counters.length; i++) {
+        const counter = counters[i];
+        const count = counter.count;
+        const tabPanelIndex = i + 1;
+
+        textContent += `Tab ${tabPanelIndex}:\n`;
+
+        // Loop through buttons and corresponding counters
+        for (let j = 1; j <= 5; j++) { // Assuming you have 5 buttons and counters
+            const button = document.querySelector(`.tabPanel:nth-child(${tabPanelIndex}) #button${j}`);
+            const counterValue = counter[`count${j}`]; // Dynamically access count property
+
+            textContent += `${button.textContent}: ${counterValue}\n`;
+        }
+
+        textContent += '\n';
+    }
+
+    var blob = new Blob([textContent], { type: "text/plain;charset=utf-8" });
+    saveAs(blob, "counters.txt");
+});
