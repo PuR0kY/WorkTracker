@@ -7,27 +7,28 @@ import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
 
 function App() {
-  let Component
-  switch (window.location.pathname){
+  let component
+  switch (window.location.pathname) {
     case "/":
-      Component = App
+      component = <App />
       break
       case "/Autorizace":
-        Component = Autorizace
+        component = <Autorizace />
         break
         case "/SPEC":
-          Component = SPEC
+          component = <SPEC />
           break
           case "/Reklamace":
-            Component = Reklamace
+            component = <Reklamace />
             break
             case "/Platby":
-              Component = Platby
+              component = <Platby />
               break
   }
   return (
     <>
       <Tabs />
+      {component}
     </>
   )
 }
