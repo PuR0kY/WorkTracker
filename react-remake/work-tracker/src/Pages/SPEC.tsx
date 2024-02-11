@@ -1,46 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function SPEC() {
-    const [count,setCount] = useState(0);
-    const [count2, setCount2] = useState(0);
-    const [count3, setCount3] = useState(0);
-    const [count4, setCount4] = useState(0);
-    const [count5, setCount5] = useState(0);
-    const [count6, setCount6] = useState(0);
+const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');
 
+// Initialize state with counters from localStorage
+const [counters, setCounters] = useState(storedItems);
+
+// Update localStorage whenever counters state changes
+useEffect(() => {
+    localStorage.setItem('counters', JSON.stringify(counters));
+}, [counters]);
+
+// Function to handle counter increments
+const handleIncrement = (counterName:any) => {
+    setCounters((prevCounters:any) => ({
+        ...prevCounters,
+        [counterName]: (prevCounters[counterName] || 0) + 1
+    }));
+};
 return (
     <div className="tabPanel">
         <div className="title">SPEC</div>
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">
-                    <button onClick={() => setCount(count + 1)}>Batch</button>
-                    <div id="counter1" className="counter">{count}</div>
+                    <button onClick={() => handleIncrement('Batch')}>Batch</button>
+                    <div id="counter1" className="counter">{counters['Batch'] || 0}</div>
                 </li>
     
                 <li className="counter-container">
-                    <button onClick={() => setCount2(count2 + 1)}>Swiftovka</button>
-                    <div id="counter2" className="counter">{count2}</div>
+                    <button onClick={() => handleIncrement('Swiftovka')}>Swiftovka</button>
+                    <div id="counter2" className="counter">{counters['Swiftovka']}</div>
                 </li>
                 
                 <li className="counter-container">
-                    <button onClick={() => setCount3(count3 + 1)}>101, MIDAS</button>
-                    <div id="counter3" className="counter">{count3}</div>
+                    <button onClick={() => handleIncrement('101, MIDAS')}>101, MIDAS</button>
+                    <div id="counter3" className="counter">{counters['101, MIDAS']}</div>
                 </li>
 
                 <li className="counter-container">
-                    <button onClick={() => setCount4(count4 + 1)}>Spoluřešitelka</button>
-                    <div id="counter4" className="counter">{count4}</div>
+                    <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
+                    <div id="counter4" className="counter">{counters['Spoluřešitelka']}</div>
                 </li>
 
                 <li className="counter-container">
-                    <button onClick={() => setCount5(count5 + 1)}>SDE požadavek</button>
-                    <div id="counter5" className="counter">{count5}</div>
+                    <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
+                    <div id="counter5" className="counter">{counters['SDE požadavek']}</div>
                 </li>
 
                 <li className="counter-container">
-                    <button onClick={() => setCount6(count6 + 1)}>Testování</button>
-                    <div id="counter6" className="counter">{count6}</div>
+                    <button onClick={() => handleIncrement('Testování')}>Testování</button>
+                    <div id="counter6" className="counter">{counters['Testování']}</div>
                 </li>
             </ul>
         </div>
