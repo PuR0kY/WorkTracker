@@ -10,7 +10,7 @@ export default function SPEC() {
 
 return (
     <div className="tabPanel">
-        <div className="title">Autorizace</div>
+        <div className="title">SPEC</div>
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">

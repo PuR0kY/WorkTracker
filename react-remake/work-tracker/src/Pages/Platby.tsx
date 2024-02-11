@@ -13,7 +13,7 @@ export default function Platby() {
 
 return (
     <div className="tabPanel">
-        <div className="title">Autorizace</div>
+        <div className="title">Platby</div>
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">

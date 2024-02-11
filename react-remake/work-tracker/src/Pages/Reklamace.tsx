@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function SPEC() {
+export default function Reklamace() {
     const [count,setCount] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
@@ -13,7 +13,7 @@ export default function SPEC() {
 
 return (
     <div className="tabPanel">
-        <div className="title">Autorizace</div>
+        <div className="title">Reklamace</div>
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">
