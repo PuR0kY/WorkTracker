@@ -28,3 +28,18 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+
+
+TODO-LIST By PuR0kY:
+
+11.2.2024 EDIT:
+
+dodělat reset button for each tab
+
+přidat inputy
+
+stylizace
+
+export do dokumentu
