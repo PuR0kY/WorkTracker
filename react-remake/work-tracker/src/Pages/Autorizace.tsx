@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useCounter } from '../CounterProvider.tsx';
 
 export default function Autorizace() {
 

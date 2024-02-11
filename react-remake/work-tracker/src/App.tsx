@@ -5,6 +5,7 @@ import Autorizace from './Pages/Autorizace';
 import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
+import { CounterProvider } from './CounterProvider';
 
 function App() {
   let component
@@ -27,8 +28,10 @@ function App() {
   }
   return (
     <>
+      <CounterProvider>
       <Tabs />
       {component}
+      </CounterProvider>  
     </>
   )
 }
