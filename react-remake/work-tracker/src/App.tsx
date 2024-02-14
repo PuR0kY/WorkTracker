@@ -5,7 +5,7 @@ import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
 import  resetLocalStorage from "./components/ResetButton";
-import exportLocalData from "./components/ExportData";
+import {exportLocalData} from "./components/ExportData";
 
 function App() {
 
