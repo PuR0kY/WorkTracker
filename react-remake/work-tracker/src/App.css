@@ -14,6 +14,7 @@ body{
 .site-title {
   font-size: 30px;
   font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav {
@@ -35,18 +36,28 @@ body{
 }
 
 .nav a {
-  color: inherit;
+  color: white;
   text-decoration: none;
   height: 100%;
   font-weight: bold;
+  transition: 0.5s;
+  padding: 7px;
+  background:  rgb(71, 71, 71);
 }
 
+.nav a:hover {
+  background: rgb(60, 26, 211,0.35);
+  box-shadow: 0 0 20px rgb(60, 26, 211);
+  letter-spacing: 1px;
+}
+
+
 .nav li:hover {
-  color: blue;
+ 
 }
 
 .nav li.active {
-  color: red;
+  box-shadow: 0 0 20px red;
 }
 
 .reset {
