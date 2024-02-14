@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react'
 import Tabs from "./Tabs";
-import ReactDOM from 'react-dom/client';
 import './App.css'
 import Autorizace from './Pages/Autorizace';
 import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
+import  resetLocalStorage from "./components/ResetButton";
 
 function App() {
 
@@ -31,6 +30,9 @@ function App() {
     <>
       <Tabs />
       {component} 
+      <div className="reset">
+        <button onClick={resetLocalStorage}>Reset</button>
+      </div>
     </>
   )
 }

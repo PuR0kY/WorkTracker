@@ -44,3 +44,27 @@ body{
 .nav li.active {
   color: red;
 }
+
+.reset {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-top: 100px;
+}
+
+.reset button{
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.reset button:hover{
+  transform: scale(1.1);
+  background-color: rgb(194, 2, 2);
+}

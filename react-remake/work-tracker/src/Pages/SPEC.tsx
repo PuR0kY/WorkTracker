@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
+import  resetLocalStorage from "../components/ResetButton";
 
 export default function SPEC() {
 const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');
@@ -31,27 +32,22 @@ return (
     
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('Swiftovka')}>Swiftovka</button>
-                    <div id="counter2" className="counter">{counters['Swiftovka']}</div>
+                    <div id="counter2" className="counter">{counters['Swiftovka'] || 0}</div>
                 </li>
                 
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('101, MIDAS')}>101, MIDAS</button>
-                    <div id="counter3" className="counter">{counters['101, MIDAS']}</div>
+                    <div id="counter3" className="counter">{counters['101, MIDAS'] || 0}</div>
                 </li>
 
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
-                    <div id="counter4" className="counter">{counters['Spoluřešitelka']}</div>
+                    <div id="counter4" className="counter">{counters['Spoluřešitelka'] || 0}</div>
                 </li>
 
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
-                    <div id="counter5" className="counter">{counters['SDE požadavek']}</div>
-                </li>
-
-                <li className="counter-container">
-                    <button onClick={() => handleIncrement('Testování')}>Testování</button>
-                    <div id="counter6" className="counter">{counters['Testování']}</div>
+                    <div id="counter5" className="counter">{counters['SDE požadavek'] || 0}</div>
                 </li>
             </ul>
         </div>
