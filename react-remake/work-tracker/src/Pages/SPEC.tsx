@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
-import  resetLocalStorage from "../components/ResetButton";
 
 export default function SPEC() {
 const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');

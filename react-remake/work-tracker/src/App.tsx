@@ -5,6 +5,7 @@ import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
 import  resetLocalStorage from "./components/ResetButton";
+import exportLocalData from "./components/ExportData";
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
       {component} 
       <div className="reset">
         <button onClick={resetLocalStorage}>Reset</button>
+      </div>
+      <div className="export">
+        <button onClick={exportLocalData}>Export</button>
       </div>
     </>
   )
