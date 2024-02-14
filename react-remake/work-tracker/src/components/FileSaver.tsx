@@ -21,6 +21,7 @@ export default function createFile(){
         text = text.replace("counters: ", "")
         .replace(/{/g, "")
         .replace(/}/g, "")
+        .replace(/"/g, "")
         .replace(/debug: honey:core-sdk:\*/g, ""); 
     }
      // Create a string representation of the data
