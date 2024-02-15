@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Reklamace() {
     // Retrieve counters from localStorage, or initialize an empty object if not found
