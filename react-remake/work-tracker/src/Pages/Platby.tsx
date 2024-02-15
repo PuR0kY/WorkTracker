@@ -70,11 +70,6 @@ return (
                     <button onClick={() => handleIncrement('Testování')}>Testování</button>
                     <div id="counter9" className="counter">{counters['Testování'] || 0}</div>
                 </li>
-
-                <li className="counter-container">
-                    <button onClick={() => handleIncrement('Testování')}>Testování</button>
-                    <div id="counter9" className="counter">{counters['Testování'] || 0}</div>
-                </li>
             </ul>
         </div>
     </div>
