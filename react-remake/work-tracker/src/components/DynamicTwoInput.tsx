@@ -30,15 +30,7 @@ function DynamicTwoInput() {
     newData[index] = { ...newData[index], [name]: name === "value" ? parseInt(value) : value };
     setData(newData);
   };
-
-  const handleIncrement = (index: number) => {
-    setData(prevData => {
-      const newData = [...prevData];
-      newData[index].value += 0.5;
-      return newData;
-    });
-  };
-
+  
   const handleDelete = (index: number) => {
     const newData = [...data];
     newData.splice(index, 1);
@@ -61,7 +53,6 @@ function DynamicTwoInput() {
             value={val.value}
             onChange={(e) => handleChange(e, i)}
           />
-          <button onClick={() => handleIncrement(i)}>+</button>
           <button onClick={() => handleDelete(i)}>Delete</button>
         </div>
       ))}
