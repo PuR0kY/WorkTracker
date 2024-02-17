@@ -12,7 +12,7 @@ function App() {
   let component
   switch (window.location.pathname) {
     case "/":
-      component = <App />
+      component = <Autorizace />
       break
       case "/Autorizace":
         component = <Autorizace />
