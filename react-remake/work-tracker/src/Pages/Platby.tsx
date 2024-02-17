@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../index.css';
+import DynamicTwoInput from '../components/DynamicTwoInput';
 
 export default function Platby() {
     // Retrieve counters from localStorage, or initialize an empty object if not found
@@ -69,6 +70,12 @@ return (
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('Testování')}>Testování</button>
                     <div id="counter9" className="counter">{counters['Testování'] || 0}</div>
+                </li>
+
+                <li className='two-input'>
+                    <div>
+                        <DynamicTwoInput />     
+                    </div>                   
                 </li>
             </ul>
         </div>
