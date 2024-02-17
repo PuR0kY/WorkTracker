@@ -35,7 +35,7 @@ export default function createFile() {
   }));
 
   return (
-    <CSVLink data={csvData} filename={"localStorageData.csv"}>
+    <CSVLink data={csvData} filename={"WorkTracker.csv"}>
       <button>Export</button>
     </CSVLink>
   );

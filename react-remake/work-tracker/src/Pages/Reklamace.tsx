@@ -29,47 +29,47 @@ export default function Reklamace() {
                 <ul className="list">
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Urgence')}>Urgence</button>
-                        <div id="counter1" className="counter">{counters['Urgence'] || 0}</div>
+                        <div id="counter14" className="counter">{counters['Urgence'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Zahájená')}>Zahájená</button>
-                        <div id="counter2" className="counter">{counters['Zahájená'] || 0}</div>
+                        <div id="counter15" className="counter">{counters['Zahájená'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Ukončená')}>Ukončená</button>
-                        <div id="counter3" className="counter">{counters['Ukončená'] || 0}</div>
+                        <div id="counter16" className="counter">{counters['Ukončená'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Vratka')}>Vratka</button>
-                        <div id="counter4" className="counter">{counters['Vratka'] || 0}</div>
+                        <div id="counter17" className="counter">{counters['Vratka'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Batch')}>Batch</button>
-                        <div id="counter5" className="counter">{counters['Batch'] || 0}</div>
+                        <div id="counter18" className="counter">{counters['Batch'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
-                        <div id="counter6" className="counter">{counters['Spoluřešitelka'] || 0}</div>
+                        <div id="counter19" className="counter">{counters['Spoluřešitelka'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Třídění')}>Třídění</button>
-                        <div id="counter7" className="counter">{counters['Třídění'] || 0}</div>
+                        <div id="counter20" className="counter">{counters['Třídění'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
-                        <div id="counter8" className="counter">{counters['SDE požadavek'] || 0}</div>
+                        <div id="counter21" className="counter">{counters['SDE požadavek'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
                         <button onClick={() => handleIncrement('Testování')}>Testování</button>
-                        <div id="counter9" className="counter">{counters['Testování'] || 0}</div>
+                        <div id="counter22" className="counter">{counters['Testování'] || 0}</div>
                     </li>
 
                     <li className='two-input'>

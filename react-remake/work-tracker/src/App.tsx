@@ -15,9 +15,6 @@ function App() {
         <a className="site-title">
           Work Tracker
         </a>
-        <div className="export">
-          {CreateFile()}
-        </div>
       </nav>
       <div className='pages-container'>
         <div className='Autorizace-component'>
@@ -33,6 +30,9 @@ function App() {
           <Platby />
         </div>
       </div>
+        <div className="export">
+          {CreateFile()}
+        </div>
         <div className="reset">
           <button onClick={resetLocalStorage}>Reset</button>
         </div>

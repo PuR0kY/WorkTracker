@@ -36,13 +36,21 @@ body{
   background:  rgb(71, 71, 71);
 }
 
-.nav .export {
-  float: right;
-}
-
-.reset {
+.reset, .export{
   display: flex;
   justify-content: center;
+}
+
+.export button  {
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+  margin-bottom: 10px;
 }
 
 .reset button  {
