@@ -8,9 +8,6 @@ ul{
     padding: 1rem;
 }
 
-.list {
-}
-
 .title {
     margin-left: 40px;
     margin-top: 10px;
@@ -19,9 +16,6 @@ ul{
     font-weight: bold;
     color: rgb(71, 71, 71);
 
-}
-
-.counter-container {
 }
 
 .counter-container button{
@@ -47,7 +41,6 @@ ul{
 }
 
 .counter-container button:hover{
-    background: rgba(6, 0, 92);
-    box-shadow: 0 0 20px rgb(12, 0, 66);
-    letter-spacing: 0.5px;
+    background: black;
+
 }

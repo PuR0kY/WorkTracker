@@ -1,47 +1,43 @@
-export default function createFile(){
-    //const allItems = [];
-    let text = "";
-    // Loop through localStorage keys
-    for (let i = 0; i < localStorage.length; i++) {
-        // Get the key
-        const key = localStorage.key(i);
-        
-        if (key !== null) {
-            // Get the value associated with the key
-            const value = localStorage.getItem(key);
-        
-        // Check if value is not null
-        if (value !== null) {
-            // Add the key-value pair to the allItems array
-            //allItems.push(`${key}: ${value}`); // Push the formatted key-value pair
-            text += (`${localStorage.key(i)}: ${value}`);
-            text = text.replace(/,/g, ",\n");
-            }
-        }
-        text = text.replace("counters: ", "")
-        .replace(/{/g, "")
-        .replace(/}/g, "")
-        .replace(/"/g, "")
-        .replace(/debug: honey:core-sdk:\*/g, ""); 
-    }
-     // Create a string representation of the data
-     
+import React from "react";
+import { CSVLink } from "react-csv";
 
-     // Create a blob with the data
-    const blob = new Blob([text], { type: "text" });
- 
-     // Create a URL for the blob
-     const url = URL.createObjectURL(blob);
- 
-     // Create a temporary anchor element to trigger the download
-     const a = document.createElement("a");
-     a.href = url;
-     a.download = "localStorageData.txt";
- 
-     // Trigger the download
-     a.click();
- 
-     // Clean up
-     URL.revokeObjectURL(url);
+export default function createFile() {
+  const countersData = [];
+  const dataData:any = [];
+
+  // Loop through localStorage keys
+  for (let i = 0; i < localStorage.length; i++) {
+    const key:any = localStorage.key(i);
+    const value = localStorage.getItem(key);
+
+    if (key && value) {
+      // Check if the key is "counters" or "data" and parse accordingly
+      if (key === "counters") {
+        const counters = JSON.parse(value);
+        for (const counterKey in counters) {
+          countersData.push({ name: counterKey, value: counters[counterKey] });
+        }
+      } else if (key === "data") {
+        const data = JSON.parse(value);
+        data.forEach((item:any) => {
+          dataData.push(item);
+        });
+      }
+    }
+  }
+
+  // Combine both sets of data
+  const combinedData = [...countersData, ...dataData];
+
+  // Modify the data format before passing it to CSVLink
+  const csvData = combinedData.map((item) => ({
+    "Name": item.name,
+    "Value": item.value
+  }));
+
+  return (
+    <CSVLink data={csvData} filename={"localStorageData.csv"}>
+      <button>Export</button>
+    </CSVLink>
+  );
 }
-  

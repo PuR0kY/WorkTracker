@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../index.css';
+import DynamicTwoInput  from "../components/DynamicTwoInput.tsx";
 
 export default function Autorizace() {
     const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');
@@ -42,6 +43,12 @@ return (
                 <li className="counter-container">
                     <button onClick={() => handleIncrement('MT191 v TS')}>MT191 v TS</button>
                     <div id="counter4" className="counter">{counters['MT191 v TS'] || 0}</div>
+                </li>
+
+                <li className='two-input'>
+                    <div>
+                        <DynamicTwoInput />     
+                    </div>                   
                 </li>
             </ul>
         </div>

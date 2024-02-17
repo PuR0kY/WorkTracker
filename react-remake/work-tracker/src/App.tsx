@@ -4,8 +4,8 @@ import Autorizace from './Pages/Autorizace';
 import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
-import  resetLocalStorage from "./components/ResetButton";
-import {exportLocalData} from "./components/ExportData";
+import resetLocalStorage from "./components/ResetButton";
+import CreateFile from "./components/FileSaver";
 
 function App() {
 
@@ -35,7 +35,7 @@ function App() {
         <button onClick={resetLocalStorage}>Reset</button>
       </div>
       <div className="export">
-        <button onClick={exportLocalData}>Export</button>
+        {CreateFile()}
       </div>
     </>
   )
