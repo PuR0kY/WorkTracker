@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../index.css';
+import '../css/index.css';
 import DynamicTwoInput from '../components/DynamicTwoInput';
 
 export default function SPEC() {

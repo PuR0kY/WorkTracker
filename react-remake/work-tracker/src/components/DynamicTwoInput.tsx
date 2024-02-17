@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../css/App.css"
 
 interface DataItem {
   name: string;
@@ -38,13 +39,15 @@ function DynamicTwoInput() {
   };
 
   return (
-    <div>
-      <button onClick={handleClick}>Add</button>
+    <div >
+      <div className="add">
+        <button className="add-button" onClick={handleClick}>Add</button>
+      </div>
       {data.map((val, i) => (
-        <div key={i}>
+        <div className="inputs" key={i}>
           <input
             name="name"
-            value={val.name}
+            value={val.name || "Název"}
             onChange={(e) => handleChange(e, i)}
           />
           <input
@@ -53,7 +56,9 @@ function DynamicTwoInput() {
             value={val.value}
             onChange={(e) => handleChange(e, i)}
           />
-          <button onClick={() => handleDelete(i)}>Delete</button>
+          <div className="delete">
+              <button className="delete-button" onClick={() => handleDelete(i)}>X</button>
+          </div>
         </div>
       ))}
     </div>

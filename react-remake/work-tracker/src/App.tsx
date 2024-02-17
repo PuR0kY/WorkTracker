@@ -1,5 +1,5 @@
-import Tabs from "./Tabs";
-import './App.css'
+import './css/App.css'
+import './css/Pages.css'
 import Autorizace from './Pages/Autorizace';
 import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
@@ -9,34 +9,33 @@ import CreateFile from "./components/FileSaver";
 
 function App() {
 
-  let component
-  switch (window.location.pathname) {
-    case "/":
-      component = <Autorizace />
-      break
-      case "/Autorizace":
-        component = <Autorizace />
-        break
-        case "/SPEC":
-          component = <SPEC />
-          break
-          case "/Reklamace":
-            component = <Reklamace />
-            break
-            case "/Platby":
-              component = <Platby />
-              break
-  }
   return (
     <>
-      <Tabs />
-      {component} 
-      <div className="reset">
-        <button onClick={resetLocalStorage}>Reset</button>
+      <nav className="nav">
+        <a className="site-title">
+          Work Tracker
+        </a>
+        <div className="export">
+          {CreateFile()}
+        </div>
+      </nav>
+      <div className='pages-container'>
+        <div className='Autorizace-component'>
+          <Autorizace/>
+        </div>
+        <div className='SPEC-component'>
+          <SPEC />
+        </div>
+        <div className='Reklamace-component'>
+          <Reklamace />
+        </div>
+        <div className='Platby-component'>
+          <Platby />
+        </div>
       </div>
-      <div className="export">
-        {CreateFile()}
-      </div>
+        <div className="reset">
+          <button onClick={resetLocalStorage}>Reset</button>
+        </div>
     </>
   )
 }

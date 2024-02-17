@@ -1,4 +1,3 @@
-
 import { CSVLink } from "react-csv";
 
 export default function createFile() {

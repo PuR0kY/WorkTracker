@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import DynamicTwoInput from '../components/DynamicTwoInput';
+import '../css/index.css';
 
 export default function Reklamace() {
     // Retrieve counters from localStorage, or initialize an empty object if not found
