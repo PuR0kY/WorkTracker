@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../css/index.css';
-import DynamicTwoInput  from "../components/DynamicTwoInput.tsx";
+import DynamicTwoInput from "../components/DynamicTwoInput.tsx";
 
 export default function Autorizace() {
     const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');

@@ -23,7 +23,15 @@ body{
   color: white;
   display: flex;
   padding: 10px;
-  justify-content: space-between;
+  justify-content: center
+}
+
+.nav li{
+  display: inline;
+}
+
+.nav a:hover{
+  color: gray;
 }
 
 .nav a {

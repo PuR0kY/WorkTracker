@@ -1,35 +1,36 @@
-import './css/App.css'
-import './css/Pages.css'
+import './css/App.css';
+import './css/Pages.css';
 import Autorizace from './Pages/Autorizace';
 import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
 import resetLocalStorage from "./components/ResetButton";
 import CreateFile from "./components/FileSaver";
+import Tabs from "./Tabs";
 
 function App() {
-
+  let component
+  switch (window.location.pathname) {
+    case "/":
+      component = <App />
+      break
+      case "/Autorizace":
+        component = <Autorizace />
+        break
+        case "/SPEC":
+          component = <SPEC />
+          break
+          case "/Reklamace":
+            component = <Reklamace />
+            break
+            case "/Platby":
+              component = <Platby />
+              break
+  }
   return (
     <>
-      <nav className="nav">
-        <a className="site-title">
-          Work Tracker
-        </a>
-      </nav>
-      <div className='pages-container'>
-        <div className='Autorizace-component'>
-          <Autorizace/>
-        </div>
-        <div className='SPEC-component'>
-          <SPEC />
-        </div>
-        <div className='Reklamace-component'>
-          <Reklamace />
-        </div>
-        <div className='Platby-component'>
-          <Platby />
-        </div>
-      </div>
+      <Tabs />
+      {component}
         <div className="export">
           {CreateFile()}
         </div>

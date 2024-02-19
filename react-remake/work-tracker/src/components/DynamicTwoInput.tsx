@@ -47,7 +47,8 @@ function DynamicTwoInput() {
         <div className="inputs" key={i}>
           <input
             name="name"
-            value={val.name || "Název"}
+            value={val.name || ""}
+            placeholder="Název"
             onChange={(e) => handleChange(e, i)}
           />
           <input
