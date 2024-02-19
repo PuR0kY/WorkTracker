@@ -1,7 +1,7 @@
 export default function Tabs() {
     return(
         <nav className="nav">
-            <a href = "" className="site-title">
+            <a href = "/" className="site-title">
                 Work Tracker
             </a>
             <ul>

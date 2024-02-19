@@ -11,8 +11,8 @@ import Tabs from "./Tabs";
 function App() {
   let component
   switch (window.location.pathname) {
-    case "/":
-      component = <App />
+    case "":
+      component = <Autorizace />
       break
       case "/Autorizace":
         component = <Autorizace />
