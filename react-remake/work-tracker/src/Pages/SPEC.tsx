@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../css/index.css';
 import DynamicTwoInput from '../components/DynamicTwoInput';
+import DynamicInput from '../components/DynamicInput';
+import createFile from '../components/FileSaver';
 
 export default function SPEC() {
 const storedItems = JSON.parse(localStorage.getItem('counters') || '{}');
@@ -52,10 +54,13 @@ return (
 
                 <li className='two-input'>
                     <div>
-                        <DynamicTwoInput />     
-                    </div>                   
+                        <DynamicInput />    
+                    </div>              
                 </li>
             </ul>
+                    <div className='export'>
+                        {createFile()}
+                    </div> 
         </div>
     </div>
 )
