@@ -80,10 +80,10 @@ export default function Reklamace() {
                     </div>              
                 </li>
             </ul>
-                    <div className='export'>
-                        {createFile()}
-                    </div> 
-            </div>
+            <div className='export'>
+                {createFile()}
+            </div> 
         </div>
+    </div>
     );
 }

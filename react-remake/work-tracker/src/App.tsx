@@ -31,9 +31,6 @@ function App() {
     <>
       <Tabs />
       {component}
-        <div className="export">
-          {CreateFile()}
-        </div>
         <div className="reset">
           <button onClick={resetLocalStorage}>Reset</button>
         </div>
