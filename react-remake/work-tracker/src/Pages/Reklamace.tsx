@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import DynamicTwoInput from '../components/DynamicTwoInput';
 import '../css/index.css';
+import DynamicInput from '../components/DynamicInput';
+import createFile from '../components/FileSaver';
 
 export default function Reklamace() {
     // Retrieve counters from localStorage, or initialize an empty object if not found
@@ -73,12 +75,15 @@ export default function Reklamace() {
                     </li>
 
                     <li className='two-input'>
-                        <div>
-                            <DynamicTwoInput />     
-                        </div>                   
-                    </li>
-                </ul>
-            </div>
+                    <div>
+                        <DynamicInput />    
+                    </div>              
+                </li>
+            </ul>
+            <div className='export'>
+                {createFile()}
+            </div> 
         </div>
+    </div>
     );
 }
