@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 function DynamicInput() {
-    const [data, setData] = useState([]);
+
+    interface DataItem {
+        name: string;
+        value: number;
+      }
+
+    const [data, setData] = useState<DataItem[]>([]);
 
     // Load data from localStorage on component mount
     useEffect(() => {
-        const storedData = JSON.parse(localStorage.getItem("data"));
+        const storedData = JSON.parse(localStorage.getItem("data") || "[]");
         if (storedData) {
             setData(storedData);
         }
@@ -23,20 +29,20 @@ function DynamicInput() {
 
     const handleChange = (e:any, index:any) => {
         const { name, value } = e.target;
-        const newData = data.map((item, i) =>
+        const newData:any = data.map((item:any, i) =>
             i === index ? { ...item, [name]: value } : item
         );
         setData(newData);
     };
 
     const handleIncrement = (index:any) => {
-        const newData = [...data];
+        const newData:any = [...data];
         newData[index].value++;
         setData(newData);
     };
 
     const handleDecrement = (index:any) => {
-        const newData = [...data];
+        const newData:any = [...data];
         if (newData[index].value > 0) {
             newData[index].value--;
             setData(newData);
@@ -44,7 +50,7 @@ function DynamicInput() {
     };
 
     const handleDelete = (index:any) => {
-        const newData = [...data];
+        const newData:any = [...data];
         newData.splice(index, 1);
         setData(newData);
     };
