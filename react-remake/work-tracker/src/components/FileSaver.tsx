@@ -10,7 +10,7 @@ export default function createFile() {
 
     // Loop through localStorage keys
     for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
+      const key:any = localStorage.key(i);
       const value = localStorage.getItem(key);
 
       if (key && value) {
@@ -33,7 +33,7 @@ export default function createFile() {
     const combinedData = [...countersData, ...dataData];
 
     // Modify the data format before setting it
-    const newCsvData = combinedData.map((item) => ({
+    const newCsvData:any = combinedData.map((item) => ({
       "Name": item.name,
       "Value": item.value
     }));
