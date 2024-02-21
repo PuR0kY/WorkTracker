@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import '../css/index.css';
-import DynamicTwoInput from "../components/DynamicTwoInput.tsx";
 import DynamicInput from '../components/DynamicInput.tsx';
 import createFile from '../components/FileSaver.tsx';
 

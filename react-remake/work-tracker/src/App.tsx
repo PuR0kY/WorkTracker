@@ -5,7 +5,6 @@ import SPEC from './Pages/SPEC';
 import Reklamace from './Pages/Reklamace';
 import Platby from './Pages/Platby';
 import resetLocalStorage from "./components/ResetButton";
-import CreateFile from "./components/FileSaver";
 import Tabs from "./Tabs";
 
 function App() {
