@@ -1,13 +1,19 @@
 import { useState, useEffect } from "react";
+import '../css/index.css';
 
-function DynamicInput() {
+interface DynamicInputProps {
+    uniqueId: string;
+}
+
+function DynamicInput({ uniqueId }: DynamicInputProps) {
 
     interface DataItem {
         name: string;
         value: number;
       }
-
+      
     const [data, setData] = useState<DataItem[]>([]);
+    const uniqueKey = `data_${uniqueId}`;
 
     // Load data from localStorage on component mount
     useEffect(() => {
@@ -19,7 +25,7 @@ function DynamicInput() {
 
     // Save data to localStorage whenever it changes
     const handleSubmit = () => {
-        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem(uniqueKey, JSON.stringify(data));
         console.log("Form data submitted to localStorage:", data);
         window.location.reload(); // Refresh the page
     };
@@ -56,11 +62,11 @@ function DynamicInput() {
     };
 
     useEffect(() => {
-        console.log(localStorage.getItem("data"));
+        console.log(localStorage.getItem(uniqueKey));
     }, []);
 
     return (
-        <div>
+        <div className="dynamic-input">
             <button onClick={handleAdd}>Add</button>
             <button onClick={handleSubmit}>Submit</button>
             {data.map((item:any, index) => (
