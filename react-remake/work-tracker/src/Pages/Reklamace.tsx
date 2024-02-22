@@ -23,64 +23,98 @@ export default function Reklamace() {
         }));
     };
 
+    const handleDecrement = (counterName:any) => {
+        setCounters((prevCounters:any) => ({
+            ...prevCounters,
+            [counterName]: (prevCounters[counterName] || 0) - 1
+        }));
+    };
+
     return (
         <div className="tabPanel">
             <div className="title">Reklamace</div>
             <div id="canvas">
                 <ul className="list">
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Urgence')}>Urgence</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Urgence')}>Urgence</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Urgence')}>-</button>
+                        </div>
                         <div id="counter14" className="counter">{counters['Urgence'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Zahájená')}>Zahájená</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Zahájená')}>Zahájená</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Zahájená')}>-</button>
+                        </div>        
                         <div id="counter15" className="counter">{counters['Zahájená'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Ukončená')}>Ukončená</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Ukončená')}>Ukončená</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Ukončená')}>-</button>
+                        </div>
                         <div id="counter16" className="counter">{counters['Ukončená'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Vratka')}>Vratka</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Vratka')}>Vratka</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Vratka')}>-</button>
+                        </div>                        
                         <div id="counter17" className="counter">{counters['Vratka'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Batch')}>Batch</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Batch')}>Batch</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Batch')}>-</button>
+                        </div>                         
                         <div id="counter18" className="counter">{counters['Batch'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Spoluřešitelka')}>-</button>
+                        </div>                        
                         <div id="counter19" className="counter">{counters['Spoluřešitelka'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Třídění')}>Třídění</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Třídění')}>Třídění</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Třídění')}>-</button>
+                        </div>                        
                         <div id="counter20" className="counter">{counters['Třídění'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
+                        <div>
+                            <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('SDE požadavek')}>-</button>
+                        </div>                        
                         <div id="counter21" className="counter">{counters['SDE požadavek'] || 0}</div>
                     </li>
 
                     <li className="counter-container">
-                        <button onClick={() => handleIncrement('Testování')}>Testování</button>
+                        <div>
+                            <button onClick={() => handleIncrement('Testování')}>Testování</button>
+                            <button className='decrement-button' onClick={() => handleDecrement('Testování')}>-</button>
+                        </div>                          
                         <div id="counter22" className="counter">{counters['Testování'] || 0}</div>
                     </li>
 
                     <li className='two-input'>
                     <div>
-                        <DynamicInput />    
+                        <DynamicInput uniqueId='Reklamace'/>    
                     </div>              
                 </li>
             </ul>
             <div className='export'>
-                {createFile()}
+            {createFile({ uniqueId: "Reklamace" })}
             </div> 
         </div>
     </div>
