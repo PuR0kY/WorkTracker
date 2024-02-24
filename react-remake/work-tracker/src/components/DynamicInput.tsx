@@ -67,8 +67,10 @@ function DynamicInput({ uniqueId }: DynamicInputProps) {
 
     return (
         <div className="dynamic-input">
-            <button onClick={handleAdd}>Add</button>
-            <button onClick={handleSubmit}>Submit</button>
+            <div className="main">
+                <button onClick={handleAdd}>Add</button>
+                <button onClick={handleSubmit}>Submit</button>
+            </div>              
             {data.map((item:any, index) => (
                 <div key={index}>
                     <input
@@ -76,16 +78,16 @@ function DynamicInput({ uniqueId }: DynamicInputProps) {
                         value={item.name}
                         onChange={(e) => handleChange(e, index)}
                     />
-                    <input
+                    <input className="counter-value"
                         type="number"
                         name="value"
                         value={item.value}
                         onChange={(e) => handleChange(e, index)}
                     />
-                    <button onClick={() => handleIncrement(index)}>+</button>
-                    <button onClick={() => handleDecrement(index)}>-</button>
-                    <button onClick={() => handleDelete(index)}>Delete</button>
-                </div>
+                            <button onClick={() => handleIncrement(index)}>+</button>
+                            <button onClick={() => handleDecrement(index)}>-</button>
+                            <button onClick={() => handleDelete(index)}>Delete</button>                
+                    </div>
             ))}
         </div>
     );

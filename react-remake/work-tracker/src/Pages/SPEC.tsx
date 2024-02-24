@@ -35,7 +35,7 @@ return (
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('Batch')}>Batch</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Batch')}>-</button>
                     </div>
@@ -43,7 +43,7 @@ return (
                 </li>
     
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('Swiftovka')}>Swiftovka</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Swiftovka')}>-</button>
                     </div>                   
@@ -51,7 +51,7 @@ return (
                 </li>
                 
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('101, MIDAS')}>101, MIDAS</button>
                         <button className='decrement-button' onClick={() => handleDecrement('101, MIDAS')}>-</button>
                     </div>                      
@@ -59,7 +59,7 @@ return (
                 </li>
 
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>   
                         <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Spoluřešitelka')}>-</button>
                     </div>                    
@@ -67,7 +67,7 @@ return (
                 </li>
 
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
                         <button className='decrement-button' onClick={() => handleDecrement('SDE požadavek')}>-</button>
                     </div>                    

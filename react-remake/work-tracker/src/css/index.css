@@ -6,52 +6,59 @@
 }
 
 .title{
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
     font-weight: bold;
     color: rgb(71, 71, 71);
-    margin: 10px;
+    margin: 20px;
 }
 
 .tabPanel{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    width: 100%;
 }
 
-.counter-container button{
-    margin: 10px;
-    color: white;
-    text-decoration: none;
+.counter-container {
+    width: 100%;
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.counter-container .buttons{
     height: 100%;
+}
+.buttons button{
+    width: 150px;
+    color: white;
+    margin-bottom: 3px;
+    text-decoration: none;
     font-weight: bold;
-    font-size: large;
-    transition: 0.5s;
-    padding: 7px;
+    padding: 5px;
     background:  rgb(71, 71, 71);
     border-radius: 5px;
-    width: 20%;
 }
 
-.counter-container .decrement-button{
-    width: 2rem;
-    margin:0;
+.buttons .decrement-button{
+    width: 30px;
 }
 
 .counter-container .counter{
+    margin-left: 30px;
     font-weight: bold;
     color:rgb(71, 71, 71);
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .two-input{
+    width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
 }
-
 .two-input .dynamic-input button{
     color: white;
     margin-bottom: 3px;
@@ -62,12 +69,23 @@
     border-radius: 5px;
 }
 
-.two-input input{
+.two-input .dynamic-input .main {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-    width: 15%;
+.two-input input{
+    margin-left: 50px;
     height: 30px;
-    font-size: 20px;
+    font-size: 1rem;
+    text-align: center;
     font-weight: bold;
     color:  rgb(71, 71, 71);
 
+}
+
+.two-input .counter-value {
+    width: 40px;
+    border: none;
 }

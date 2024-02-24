@@ -36,7 +36,7 @@ export default function Reklamace() {
             <div id="canvas">
                 <ul className="list">
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Urgence')}>Urgence</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Urgence')}>-</button>
                         </div>
@@ -44,7 +44,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Zahájená')}>Zahájená</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Zahájená')}>-</button>
                         </div>        
@@ -52,7 +52,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Ukončená')}>Ukončená</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Ukončená')}>-</button>
                         </div>
@@ -60,7 +60,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Vratka')}>Vratka</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Vratka')}>-</button>
                         </div>                        
@@ -68,7 +68,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Batch')}>Batch</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Batch')}>-</button>
                         </div>                         
@@ -76,7 +76,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Spoluřešitelka')}>Spoluřešitelka</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Spoluřešitelka')}>-</button>
                         </div>                        
@@ -84,7 +84,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Třídění')}>Třídění</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Třídění')}>-</button>
                         </div>                        
@@ -92,7 +92,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('SDE požadavek')}>SDE požadavek</button>
                             <button className='decrement-button' onClick={() => handleDecrement('SDE požadavek')}>-</button>
                         </div>                        
@@ -100,7 +100,7 @@ export default function Reklamace() {
                     </li>
 
                     <li className="counter-container">
-                        <div>
+                        <div className='buttons'>
                             <button onClick={() => handleIncrement('Testování')}>Testování</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Testování')}>-</button>
                         </div>                          

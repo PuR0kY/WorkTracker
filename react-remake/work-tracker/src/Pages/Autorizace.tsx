@@ -36,7 +36,7 @@ return (
         <div id="canvas">
             <ul className="list">
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('Batch kontrola')}>Batch kontrola</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Batch kontrola')}>-</button>
                     </div>
@@ -44,7 +44,7 @@ return (
                 </li>
     
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('Kontrola reklamace')}>Kontrola reklamace</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Kontrola reklamace')}>-</button>
                     </div>
@@ -52,7 +52,7 @@ return (
                 </li>
                 
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('Autorizace vratky')}>Autorizace vratky</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Autorizace vratky')}>-</button>
                     </div>
@@ -60,7 +60,7 @@ return (
                 </li>
 
                 <li className="counter-container">
-                    <div>
+                    <div className='buttons'>
                         <button onClick={() => handleIncrement('MT191 v TS')}>MT191 v TS</button>
                         <button className='decrement-button' onClick={() => handleDecrement('MT191 v TS')}>-</button>
                     </div>
