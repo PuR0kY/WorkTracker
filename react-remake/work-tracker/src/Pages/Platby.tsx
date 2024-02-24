@@ -100,12 +100,12 @@ return (
                     <div id="counter12" className="counter">{counters['MT191 v TS'] || 0}</div>
                 </li>
 
-                <li className="counter-container">
-                    <div className='buttons'>
+                <li className="counter-container-test">
+                    <div className='test-buttons'>
                         <button onClick={() => handleIncrement('Testování')}>Testování</button>
                         <button className='decrement-button' onClick={() => handleDecrement('Testování')}>-</button>
                     </div>
-                    <div id="counter13" className="counter">{counters['Testování'] || 0}</div>
+                    <div id="counter13" className="counter">{(counters['Testování'] || 0) + " min"}</div>
                 </li>
 
                 <li className='two-input'>

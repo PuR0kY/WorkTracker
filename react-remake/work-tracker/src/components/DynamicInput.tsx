@@ -73,7 +73,8 @@ function DynamicInput({ uniqueId }: DynamicInputProps) {
             </div>              
             {data.map((item:any, index) => (
                 <div key={index}>
-                    <input
+                    <input className="name-input"
+                        placeholder="Název"
                         name="name"
                         value={item.name}
                         onChange={(e) => handleChange(e, index)}
