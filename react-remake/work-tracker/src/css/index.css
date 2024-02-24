@@ -20,10 +20,10 @@
 
 .counter-container {
     width: 100%;
-   display: grid;
-   grid-template-columns: auto auto;
-   justify-content: center;
-   align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .counter-container-test{
@@ -37,8 +37,8 @@
 
 .counter-container-test .test-buttons{
     display: block;
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 .counter-container-test .counter{

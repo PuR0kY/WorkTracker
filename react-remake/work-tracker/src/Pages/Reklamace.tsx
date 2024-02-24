@@ -99,12 +99,12 @@ export default function Reklamace() {
                         <div id="counter21" className="counter">{counters['SDE požadavek'] || 0}</div>
                     </li>
 
-                    <li className="counter-container">
-                        <div className='buttons'>
+                    <li className="counter-container-test">
+                        <div className='test-buttons'>
                             <button onClick={() => handleIncrement('Testování')}>Testování</button>
                             <button className='decrement-button' onClick={() => handleDecrement('Testování')}>-</button>
-                        </div>                          
-                        <div id="counter22" className="counter">{counters['Testování'] || 0}</div>
+                        </div>
+                        <div id="counter13" className="counter">{(counters['Testování'] || 0) + " min"}</div>
                     </li>
 
                     <li className='two-input'>
